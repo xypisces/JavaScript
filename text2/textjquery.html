@@ -65,10 +65,10 @@ $(function(){
 	var x=10;
     var y=20;
     $("a.tooltip").mouseover(function(e){
-    	this.mytitle=this.title;
-    	this.title="";
-    	var imgTitle=this.mytitle?"<br/>"+this.mytitle:"";
-    	var tooltip="<div id='tooltip1'><img src='"+this.href+"'>"+imgTitle+"</div>"
+    	// this.mytitle=this.title;
+    	// this.title="";
+    	// var imgTitle=this.mytitle?"<br/>"+this.mytitle:"";
+    	var tooltip="<div id='tooltip1'><img src='"+this.href+"'></div>"
     	$("body").append(tooltip);
     	$("#tooltip1").css({
     		"top":(e.pageY+y)+"px",
@@ -76,7 +76,7 @@ $(function(){
     	}).show("fast");
     }).mouseout(function() {
     	/* Act on the event */
-    	this.title=this.mytitle;
+    	// this.title=this.mytitle;
     	$("#tooltip1").remove();
     }).mousemove(function(e) {
     	/* Act on the event */

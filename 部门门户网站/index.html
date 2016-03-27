@@ -1,0 +1,189 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网站首页初版</title>
+<link rel="stylesheet" href="css\style.css" />
+<script type="text/javascript">
+	window.onload=function()
+	{
+		var onr=document.getElementById('neirong')；
+		var ozj=document.getElementById('zj')；
+		var obj=document.getElementById('bianjie');
+		var oli=getByClass(ozj, 'list')[0].getElementsByTagName('li');
+
+    for(i=0; i<oli.length; i++)
+    {
+        oli[i].index=i;
+        oli[i].onclick=function()
+        {
+            for(i=0; i<oli.length; i++)
+            {
+                oli[i].className='';
+                onr[i].style.display='none';
+            }
+            this.className='active';
+            onr[this.index].style.display='block';
+        };
+        // aA[i].onfocus=function(){this.blur();};
+    }
+	};
+</script>
+</head>
+
+<body>
+		<!-- 顶部区域 -->
+		<div id="db">
+			<a href="#"><img src="images/DGIT.jpg"></a>
+			<div class="search">
+				<form>
+					<input class="ss" type="text" name="keyword" value="搜索关键词" >
+		    		<input type="submit" class="search input[type="submit"]" >
+	        	</form>
+        	</div>
+        	<!-- 用户登录部分 -->
+        	<form action="" class="login2">
+					<div class="zh"><p class="zt">用户名</p><input type="text" class="yh" />
+						<div class="jz">
+							<input type="checkbox"><p class="zt">记住我</p>
+						</div>
+					</div>
+					<div class="mm">
+						<p class="zt">密码</p> <input type="password"  name='psd' class="mima"/>
+						<div class="ma">
+					         <a href="" class="zt">忘记密码？</a>
+						</div>
+					</div>
+					<div class="dl">
+						<input type="submit" class="dl2" value=""/>
+						<div class="zc"><a href=""><p>注册加入我们</p></a></div>
+					</div>
+				</form>
+        	<!-- 用户登录部分结束 -->
+
+		</div>
+		<!-- 顶部区域结束 -->
+
+
+		<!-- 中间部分 -->
+	<div id="zj">
+			<!-- 导航部分 -->
+			<div class="dh">
+				<ul class="list">
+					<a href="">
+						<li class="z1"><span class="icon_z1"></span>主页</li>
+					</a>
+					<a href="">
+						<li class="z2"><span class="icon_z2"></span>作品展示</li>
+					</a>
+					<a href="">
+						<li class="z3"><span class="icon_z3"></span>技术交流</li>
+					</a>
+					<a href="">
+						<li class="z4"><span class="icon_z4"></span>资源共享</li>
+					</a>
+					<a href="">
+						<li class="z5"><span class="icon_z5"></span>意见反馈</li>
+					</a>
+				</ul>
+			</div>
+			<!-- 导航部分结束 -->
+		<div id="neirong"></div>
+		<span id="bianjie"></span>
+
+			<!-- 导航内容部分 -->
+
+			<!-- 图片部分 -->
+			<div class="tp">
+			</div>
+			<!-- 图片部分结束 -->
+
+			<!-- 资讯部分 -->
+			<div id="zx">
+				<div class="zx1">
+					<div class="zx_head1">
+						<h1><span class="icon_zx_head1"></span>最新资讯</h1>
+					</div>
+					<div class="zx_body1">
+						<ul>
+							<li>· 锐捷认证4.96版本下载</li>
+							<li>· 锐捷认证3.95版本下载 </li>
+							<li>· 皖南医学院VPN系统用户手册</li>
+							<li>· 校本部与附院开展网络与信息化建..</li>
+							<li>· 芜湖市信息系统安全等级保护检查...</li>
+							<br />
+							<hr align="center" size="1" width="270"color="#DEDEDE" nashade="noshade">
+							<p><a href="#">>>更多</a></p>
+						</ul>
+					</div>
+				</div>
+				<div class="zx2">
+					<div class="zx_head2">
+						<h1><span class="icon_zx_head2"></span>最新发帖</h1>
+					</div>
+					<div class="zx_body2">
+						<ul>
+							<li>· 锐捷认证4.96版本下载</li>
+							<li>· 锐捷认证3.95版本下载 </li>
+							<li>· 皖南医学院VPN系统用户手册</li>
+							<li>· 校本部与附院开展网络与信息化建..</li>
+							<li>· 芜湖市信息系统安全等级保护检查...</li>
+							<br />
+							<hr align="center" size="1" width="270"color="#DEDEDE" nashade="noshade">
+							<p><a href="#">>>更多</a></p>
+						</ul>
+					</div>
+				</div>
+				<div class="zx3">
+					<div class="zx_head3">
+						<h1><span class="icon_zx_head3"></span>最新技术</h1>
+					</div>
+					<div class="zx_body3">
+						<ul>
+							<li>· 锐捷认证4.96版本下载</li>
+							<li>· 锐捷认证3.95版本下载 </li>
+							<li>· 皖南医学院VPN系统用户手册</li>
+							<li>· 校本部与附院开展网络与信息化建..</li>
+							<li>· 芜湖市信息系统安全等级保护检查...</li>
+							<br />
+							<hr align="center" size="1" width="270"color="#DEDEDE" nashade="noshade">
+							<p><a href="#">>>更多</a></p>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- 资讯部分结束 -->
+
+			<!-- 右边部分 -->
+			<div class="yb">
+				<div class="right">
+					<a href="" class="top">为<a href="" class="top2">您推荐</a></a>
+					<ul class="list">
+						<li><a href="" class="li">一个人创业：第一天</a></li>
+						<li><a href="" class="li">一个人创业：第二天</a></li>
+						<li><a href="" class="li">一个人创业：第三天</a></li>
+						<li><a href="" class="li">一个人创业：第四天</a></li>
+						<li><a href="" class="li">一个人创业：第五天</a></li>
+						<li><a href="" class="li">一个人创业：第六天</a></li>
+					</ul>
+				</div>
+			</div>
+			<!-- 右边部分结束 -->
+		
+
+
+			<!-- 导航内容部分结束 -->
+	</div>
+		<!-- 中间部分结束 -->
+		<!-- 底部部分 -->
+		<div id="db2">
+			<div class="ls">
+				<p>联系我们&nbsp&nbspQQ：073723009@qq.com&nbsp邮箱：073723009@qq.com&nbsp&nbsp @计算机学院学生会网络技术部</p>
+			</div>
+			<!-- <div class="ls2">
+				<p></p>
+			</div> -->
+		</div>
+		<!-- 底部部分结束 -->
+</body>
+</html>
