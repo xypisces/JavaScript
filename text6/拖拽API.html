@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="utf-8">
+	<title>H5的contentEditable属性</title>
+</head>
+<script type="text/javascript" >
+	function init() {
+		// body...
+		var source = document.getElementById('dragme');
+		var dest = document.getElementById('text');
+		//开始拖放
+		source.addEventListener("dragstart",function(ev){
+			//向对象追加数据
+			var dt = ev.dataTransfer;
+			dt.effectAllowed = 'copy';
+			//拖动元素
+			dt.setData("text/plain","徐煜");
+		},false);
+		//拖动结束
+		dest.addEventListener("dragend",function(ev){
+			//防止默认事件发生(拒绝拖放)
+			ev.preventDefault();
+		},false);
+		//开始拖放
+		dest.addEventListener("drop",function(ev){
+			//取得数据
+			var dt =ev.dataTransfer;
+			var text=dt.getData("text/plain");
+			dest.textContent+=text;
+			ev.preventDefault();
+			ev.stopPropagation();
+		},false);
+		/*dest.addEventListener("dragover",function(ev){
+			var dt = ev.dataTransfer;
+			dt.dropEffect='copy';
+			ev.preventDefault();
+		},false);	*/	
+	}
+	document.ondragover =function(e){e.preventDefault();};
+	document.ondrop=function(e){e.preventDefault();};
+</script>
+<body onload="init()">
+	<h1>简单拖拽实例</h1>
+	<div id="dragme" draggable="true" style="width: 200px;border: 1px solid gray;">试一试</div>
+	<div id="text" style="width: 200px; height: 200px; border: 1px solid blue;"></div>
+</body>
