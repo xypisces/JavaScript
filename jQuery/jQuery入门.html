@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>each</title>
+	
+</head>
+<body>
+	<input type="button" id="send" value="ajxa获取">
+	<div class="comment">已有评论:</div>
+	<div id="resTest"></div>
+
+	<script src="jquery-2.2.2.js"></script>
+	<script>
+
+
+	$(function(){
+		$('#send').click(function(){
+			$('#resTest').load("ajax.html .para");
+		})
+	})
+	//each
+		// $(document).ready(function(){
+		// 	var values =['a','b','c','d'];
+		// 	$.each(values,function(index,value){
+		// 		values[index] = value.toUpperCase();
+		// 	})
+		// 	$('p').each(function(index,el){
+		// 		$(el).prepend('-1')
+		// 	})
+		// 	$('p').each(function(index){
+		// 		$(this).prepend(values[index])
+		// 	})
+		// })
+	</script>
+</body>
+</html>
