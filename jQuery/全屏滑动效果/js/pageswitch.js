@@ -11,7 +11,12 @@
 		PageSwitch.prototype = {
 			init : function(){
 
-			}
+			},
+			pagesCount:function(){},
+			switchLength:function(){},
+			_initLayout:function(){},
+			_initPaging:function(){},
+			_initEvent:function(){}
 		}
 
 		return PageSwitch;
