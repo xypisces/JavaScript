@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>倒计时</title>
+	<script>
+	window.onload=function(){		
+		//判断是否在日期内
+		/*for(var i=0;i<schedule.length;i++){
+			var startDate = schedule[i][0];
+			var endDate = schedule[i][1];
+
+			var startMs = Date.parse(startDate);
+			var endMs = Date.parse(endDate);
+			var currentMs = Date.parse(new Date());
+
+			if(endMs>currentMs && currentMs>=startMs){
+				initClock('clockdiv',endDate);
+			}	
+		}*/
+
+		//设定时间
+			var timeMinutes = 10;
+			var currentTime = Date.parse(new Date());
+			var deadline = new Date(currentTime + timeMinutes*60*1000);
+			initClock('clockdiv',deadline);
+	}
+	//设置启动时间
+	var schedule = [
+		['2016-07-01','2016-08-01'],
+		['2016-09-01','2016-10-01']
+	];
+	// var deadtime = '2016-08-01';
+	//将倒计时的数据以一个对象的方式返回
+		function getTime(endtime){
+			var t = Date.parse(endtime)-Date.parse(new Date());
+			var seconds = Math.floor((t/1000)%60);
+			var minutes = Math.floor((t/1000/60)%60);
+			var hours = Math.floor((t/(1000*60*60))%24);
+			var days = Math.floor(t/(1000*60*60*24));
+			return{
+				'total':t,
+				'days':days,
+				'hours':hours,
+				'seconds':seconds,
+				'minutes':minutes
+			};
+		}
+		//将数据显示在视图中并设置定时器.
+		/*function initClock(id,endtime){
+			var clock = document.getElementById(id);
+			var timeinterval = setInterval(function(){
+				var t = getTime(endtime);
+				clock.innerHTML ='days:'+t.days+'</br>'+'hours'+t.hours+'</br>'+'minutes:'+t.minutes+'</br>'+'seconds:'+t.seconds;
+				if(t.total <= 0){
+					clearInterval(timeinterval);
+				}
+			}, 1000);
+		}*/
+
+		
+		function initClock(id,endtime){
+			var clock = document.getElementById(id);
+			//自动安排时间
+			clock.style.display='block';
+			//避免重建时钟
+			var daysSpan = clock.querySelector('.days');
+			var hoursSpan = clock.querySelector('.hours');
+			var minutesSpan = clock.querySelector('.minutes');
+			var secondsSpan = clock.querySelector('.seconds');
+			//移除延迟加载
+			function updateClock(){
+			var t = getTime(endtime);
+			//添加先导0
+				daysSpan.innerHTML = ('0'+t.days).slice(-2);
+				hoursSpan.innerHTML = ('0'+t.hours).slice(-2);
+				minutesSpan.innerHTML = ('0'+t.minutes).slice(-2);
+				secondsSpan.innerHTML = ('0'+t.seconds).slice(-2);
+				if(t.total <= 0){
+					clearInterval(timeinterval);
+				}
+		}
+		updateClock();
+		var timeinterval = setInterval(updateClock, 1000);	
+		}
+		
+
+	</script>
+</head>
+<body>
+	<div id="clockdiv" style="display: none;">
+		<!-- 避免重建时钟 -->
+		Days: <span class="days"></span> <br>
+		Hours: <span class="hours"></span> <br>
+		Minutes: <span class="minutes"></span> <br>
+		Seconds: <span class="seconds"></span> <br>
+	</div>
+</body>
+</html>
