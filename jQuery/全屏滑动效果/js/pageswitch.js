@@ -8,7 +8,7 @@
 			this.element = element;
 			this.init();
 		}
-		PageSwitch.prototype = {
+		PageSwitch.prototype ={
 			init : function(){
 
 			},
