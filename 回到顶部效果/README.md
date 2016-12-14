@@ -4,7 +4,7 @@
 
 ###使用JS
 - document.getElementById
-- document.documentElement.scrollTop || document.body.scrollTop
+- document.documentElement.scrollTop || document.body.scrollTop 
 - window.onload
 - onclick
 - window.onscroll
