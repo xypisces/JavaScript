@@ -22,33 +22,46 @@
 		display: none;
 		background-color: yellow;
 	}
+	#box2{
+		width: 700px;
+		height: 100px;
+		margin: 0 auto;
+		display: none;
+		background-color: blue;
+	}
 	</style>
 </head>
 <body>
 	<div id="box">
-		<div id="box1"></div>	
+		<div id="box1"></div>
+		<div id="box2"></div>
 	</div>
 	<script>
 	window.onload = function(){	
 			var oBox = document.getElementById('box1');
+			var oBox2 = document.getElementById('box2');
 			var h = 0;
 			var step = 5;
 			var maxH = 400;
+			var minH = 100;
 			function Down(){
 				oBox.style.height = h +'px';
 				oBox.style.display = 'block';
 				if(h<maxH){
 					h+=step;
-					setTimeout(Down,1);
-				}else{
+					setTimeout(Down,1); 
+				}else{ 
 					setTimeout(Up, 3000);
 				}
 			}
 			function Up(){
-				if(h>0){
+				if(h>minH){
 					h-=step;
 					oBox.style.height = h + 'px';
 					setTimeout(Up, 1);
+				}else{
+					oBox.style.display = 'none';
+					oBox2.style.display = 'block';
 				}
 			}
 			setTimeout(Down, 1000);

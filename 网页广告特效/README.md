@@ -7,3 +7,4 @@
 - var $ = function(id){ return document.getElementById(id);}
 
 ### 伸缩性广告
+- setTimeout:过多久后执行，setInterval：隔多久执行一次
