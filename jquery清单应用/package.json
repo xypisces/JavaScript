@@ -1,0 +1,21 @@
+{
+  "name": "todolist",
+  "version": "1.0.0",
+  "description": "todolist about jquery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "xypisces"
+  },
+  "keywords": [
+    "jquery"
+  ],
+  "author": "xy",
+  "license": "ISC",
+  "devDependencies": {
+    "jquery": "^3.1.1"
+  }
+}
