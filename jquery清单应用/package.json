@@ -16,6 +16,7 @@
   "author": "xy",
   "license": "ISC",
   "devDependencies": {
-    "jquery": "^3.1.1"
+    "jquery": "^3.1.1",
+    "normalize.css": "^5.0.0"
   }
 }

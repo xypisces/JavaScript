@@ -4,9 +4,70 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>ToDoList</title>
-	<link rel="stylesheet" href="">
+	<link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+	<link rel="stylesheet" href="css/base.css">
 </head>
 <body>
-	<script src="node_modules/jquery/dist/jquery.js"></script>
+<!-- 总容器 -->
+<div class="container">  
+	<!-- 添加任务 -->
+	<h1>My-To-Do-List</h1>
+	<div class="add-task">
+		<input type="text" placeholder="e.g.:下午记得买菜">
+		<button type="submit">submit</button>
+	</div>
+	<!-- 任务列表 -->
+	<div class="task-list">
+		<div class="task-item">
+			<span><input type="checkbox"></span>
+			<span class="task-content">item content 1</span>
+			<span>delect</span>
+			<span>detail</span>
+		</div>
+		<div class="task-item">
+			<span><input type="checkbox"></span>
+			<span class="task-content">item content 1</span>
+			<span>delect</span>
+			<span>detail</span>
+		</div>
+		<div class="task-item">
+			<span><input type="checkbox"></span>
+			<span class="task-content">item content 1</span>
+			<span>delect</span>
+			<span>detail</span>
+		</div>
+		<div class="task-item">
+			<span><input type="checkbox"></span>
+			<span class="task-content">item content 1</span>
+			<span>delect</span>
+			<span>detail</span>
+		</div>
+		<div class="task-item">
+			<span><input type="checkbox"></span>
+			<span class="task-content">item content 1</span>
+			<span>delect</span>
+			<span>detail</span>
+		</div>	
+	</div>
+	<!-- 任务详情 -->
+	<div class="task-detail-mask"></div>
+	<div class="task-detail">
+		<div class="content">
+			下午记得买菜
+		</div>
+		<div>
+			<div class="desc">
+				<textarea ></textarea>
+			</div>
+		</div>
+		<div class="remind">
+			<input type="date">
+			<!-- <button type="submit">submit</button> -->
+		</div>
+	</div>
+</div>
+
+<script src="node_modules/jquery/dist/jquery.js"></script>
+<script src="js/base.js"></script>
 </body>
 </html>
