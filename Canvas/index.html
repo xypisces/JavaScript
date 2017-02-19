@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>canvas</title>
+	<link rel="stylesheet" href="">
+	<style>
+		#canvas{
+			border: 1px solid #aaa;
+			display: block;
+			margin: 50px auto;
+		}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="1024" height="650">
+		当前浏览器不支持canvas,请更换浏览器
+	</canvas>
+
+	<script>
+		window.onload = function() {
+			var canvas = document.getElementById('canvas');
+			// canvas.width = 1024;
+			// canvas.height = 650;
+			var context = canvas.getContext('2d');
+			//画直线
+			/* 
+				context.beginPath() //开始一段新的绘制
+				context.moveTo(100,100); //起始点
+				context.lineTo(700,700);
+				context.lineTo(100,700);
+				context.lineTo(100,100);
+				context.closePath() //结束绘制
+				//形状
+				context.lineWidth = 5;
+				context.strokeStyle = "#005588";
+				context.stroke();
+				//填充
+				context.fillStyle = "rgb(2,100,30)";
+				context.fill()
+			*/
+			/*
+				画圆
+				context.arc(300,300,200,0,1.5*Math.PI,true);
+				//圆心坐标,半径.起始位置,结束为止,anticlockwise是否逆时针绘制
+			*/
+
+		}
+	</script>
+</body>
+</html>
